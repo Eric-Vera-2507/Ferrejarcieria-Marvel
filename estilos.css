@@ -1,4 +1,4 @@
-body, html {
+*{
     margin: 0;
     padding: 0;
 }
@@ -99,13 +99,44 @@ body, html {
 }
 
 .Carrusel_Base{
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    height: 45%;
-    position: absolute;
+    width: 1280px;
+    height: auto;
+    margin: 45px auto 0;
+    overflow: hidden;
+    position: relative;
+    
 }
-.Carrusel{
 
-    background-color: black;
+.Carrusel_Base ul{
+    display: flex;
+    padding: 0;
+    width: 400%;
+    animation: slide 16s infinite alternate ease-in-out;
+}
+
+.Carrusel_Base li{
+    list-style: none;
+    position: relative;
+   
+
+}
+.Carrusel_Base img{
+    width: 100%;
+
+}
+@keyframes slide{
+    0% { margin-left: 0%; }
+    20% { margin-left: 0%; }
+
+    25% { margin-left: -100%; }
+    45% { margin-left: -100%; }
+
+    50% { margin-left: -200%; }
+    70% { margin-left: -200%; } 
+
+    75% { margin-left: -300%; }
+    100% { margin-left: -300%; } 
+    
+
+
 }
