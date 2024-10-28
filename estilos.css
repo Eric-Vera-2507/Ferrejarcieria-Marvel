@@ -3,6 +3,7 @@
     padding: 0;
 }
 
+
 .encabezado {
     display: flex;
     justify-content: center;
@@ -151,9 +152,9 @@
     text-align: center;
 }
 .Menu_Lat{
-    width: 22%; 
-    padding: 20px;
-    float: left;
+    display: flexbox;
+    width: 25%;
+
     
 
 }
@@ -167,9 +168,6 @@
     border: 1px solid black;
     padding: 10px;
     border-radius: 8px;
-
-    
-    
 }
 
 .filtros a{
@@ -206,24 +204,21 @@
 }
 
 .tabla_cont{
-    width: 78%;
-    margin-left: 30%;
-    margin-top: 90px;
     
-
+    width: 70%;
+    margin-left: 29%;
+    position: fixed;
 }
 
 
 .tabla_productos{
-    width: 78%;
+    width: 100%;
     border-collapse: collapse;
-    padding: 80px;
-
 }
 
 .tabla_productos tr, td{
     border: 1px solid black;
     height: 120px;
-    padding: 120px;
+    padding: 100px;
     text-align: center;
 }
