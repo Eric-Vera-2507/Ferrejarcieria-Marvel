@@ -71,7 +71,7 @@
 .nav_elementos a{
     text-decoration: none;
     color: white;
-    font-family: 'Courier New', Courier, monospace
+    font-family: 'Courier New', Courier, monospace;
     padding: 5px 10px;
     transition:backgroung 0.3s;
 }
