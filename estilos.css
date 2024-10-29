@@ -61,7 +61,7 @@
     padding: 0;
     display: flex;
     width: 100%;
-    height: 50px;
+    height: 55px;
     background-color: #0056b3;
 }
 
@@ -85,7 +85,7 @@
 .carrito{
     display: flex;
     float: right;
-    margin-left: 60%;
+    margin-left: 50%;
 }
 
 .btn_carrito{
@@ -151,12 +151,15 @@
     padding: 90px;
     text-align: center;
 }
+
+.contenedor{
+    display: flex;
+}
 .Menu_Lat{
-    display: flexbox;
+    display: flex;
+    flex-direction: column;
     width: 25%;
-
-    
-
+    margin-right: 130px;
 }
 .filtros{
     margin-top: 60px;
@@ -203,22 +206,89 @@
     background-color: #1ebcfb;
 }
 
-.tabla_cont{
-    
-    width: 70%;
-    margin-left: 29%;
-    position: fixed;
+.productos_cont{
+    width: 77%;
+    margin-top: 60px;
+    background-color: lightgray;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-
-.tabla_productos{
-    width: 100%;
-    border-collapse: collapse;
-}
-
-.tabla_productos tr, td{
+.item{
+    width: 310px;
+    height: 350px;
     border: 1px solid black;
-    height: 120px;
-    padding: 100px;
     text-align: center;
+    line-height: 60px;
+    margin: 10px
+}
+
+.indice{
+    width: 80%;
+    margin-left: 30%;
+    margin-top: 50px;
+}
+.indice ul{
+    display: flex;
+
+}
+.indice li{
+    list-style: none;
+    font-size: 20px;
+}
+.indice h3{
+    font-size: 20px;
+    padding: 10px;
+    margin-top: 13px;  
+}
+
+.indice button{
+    width: 50px;
+    height: 50px;
+    border-radius: 6px;
+    background-color: white;
+}
+
+.indice button:hover{
+    background-color: #1ebcfb;
+}
+
+.contenedor_desp{
+    width: 700px;
+    margin: 30px auto;
+}
+
+.contenedor_desp details{
+    background: color #efd2f4;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 12px;
+    
+}
+
+.contenedor_desp details summary{
+    cursor: pointer;
+    display: flex;
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 16px 24px;
+    background-color: #1d3557;
+    color: white;
+    user-select: none;
+}
+
+.contenedor_desp details article{
+    padding: 16px;
+    line-height: 1.8;
+    font-size: 24px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.contenedor_desp details[Open] summary{
+    background-color: #0b1a31;
+}
+
+.contenedor_desp  details[open] summary .icon{
+    rotate: 180deg;
 }
