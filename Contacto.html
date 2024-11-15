@@ -3,6 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="estilos.css">
+    <style>
+        label{
+            margin-left: 5px;
+
+        }
+    </style>
     <title>Ferrejarciería Marvel-Contacto</title>
 </head>
 <body>
@@ -46,16 +52,16 @@
                 </article>
            </details>
         </section>
-        <section class="form_ayuda">
-            <h2>¿Necesitas Ayuda?</h2>
-            <form action="" method="post">
-                <P><label for="nombre">Nombre: <input type="text" id="nombre" required></label> 
-                    <label>Apellido: <input type="text" id="apellido"></label>
-                </P>
-                <p><label for="email">Correo electrónico: <input type="email" id="email" required></label> </P>
-                <p><label for="num">Número telefónico: <input type="text" id="tel" required></label> </P>
-                <p><label for="prod">Producto deseado: <input type="text" id="prod"></label> </P>
-                <p><label for="Mensaje">Su Mensaje: <input type="textarea" id="mensj" required></label> </P>
+        <section class="section_ayuda">
+            <form action="" method="post" class="form_ayuda">
+                <h2 style="text-align: center;">¿Necesitas Ayuda?</h2>
+                <P><label for="nombre">Nombre: <input type="text" id="nombre" required style="width: 180px; margin: 10px;"></label></P>
+                 <p><label>Apellido: <input type="text" id="apellido" style="width:180px; margin: 10px;"></label></p>
+                <p><label for="email">Correo electrónico: <input type="email" id="email" required style="margin: 10px; width: 200px;"></label> </P>
+                <p><label for="num">Número telefónico: <input type="text" id="tel" required style="margin: 10px;"></label> </P>
+                <p><label for="prod">Producto deseado: <input type="text" id="prod" style="margin: 10px;"></label> </P>
+                <p><label for="Mensaje">Su Mensaje: </label> </P>
+                 <input type="textarea" id="mensj" required style="height: 100px; width: 350px; margin: 10px;">
             </form>
         </section>
     </main>

@@ -3,6 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="estilos.css">
+    <style>
+
+        table{
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+        td, tr{
+            width: 180px;
+            height: 50px;
+            padding: 3px;
+            text-align: center;
+           
+        }
+    </style>
     <title>Ferrejarciería Marvel-Carrito</title>
 </head>
 <body>
@@ -31,6 +45,25 @@
                 </article>
             </ul>
         </nav>
+        <section class="productos_carrito">
+            <table>
+                <tr>
+                    <td id="ID_carrito">ID</td>
+                    <td id="Nom_carrito">Nombre del producto:</td>
+                    <td id="cant_Carrito">Cantidad</td>
+                    <td id="precio_carrito">Precio</td>
+                    <td id="Subto_carrito">Subtotal</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Ácido M</td>
+                    <td>10</td>
+                    <td>10.20</td>
+                    <td>100.20</td>
+                </tr>
+            </table>
+        </section>
+        <button class="btn_FinCompra">Finalizar Compra</button>
     </main>
 </body>
 </html>

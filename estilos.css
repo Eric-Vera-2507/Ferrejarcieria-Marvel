@@ -292,3 +292,16 @@
 .contenedor_desp  details[open] summary .icon{
     rotate: 180deg;
 }
+.section_ayuda h2{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 22px;
+
+}
+.form_ayuda{
+    height: 410px;
+    width: 430px;
+    border: 1px solid black;
+    border-radius: 6px;
+    
+
+}
