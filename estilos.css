@@ -1,17 +1,20 @@
 *{
     margin: 0;
     padding: 0;
+    color: white;
 }
-
 
 .encabezado {
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    background-color: rgb(0, 60,172);   
+   
+    background-color: #08244d;
     width: 100%;
     height: 130px;
+}
+.cuerpo{
+    background-color: #5b6ea9;
 }
 
 .Logo{
@@ -175,7 +178,7 @@
 
 .filtros a{
     text-decoration: none;
-    color: black;
+    color:white;
     padding: 5px 10px;
     font-size: 25px;
 }
@@ -197,7 +200,7 @@
 }
 .Marcas a{
     text-decoration: none;
-    color: black;
+    color: white;
     padding: 5px 10px;
     font-size: 25px;
 }
@@ -209,7 +212,6 @@
 .productos_cont{
     width: 77%;
     margin-top: 60px;
-    background-color: lightgray;
     display: flex;
     flex-wrap: wrap;
 }
@@ -240,6 +242,7 @@
     font-size: 20px;
     padding: 10px;
     margin-top: 13px;  
+    
 }
 
 .indice button{
@@ -247,6 +250,7 @@
     height: 50px;
     border-radius: 6px;
     background-color: white;
+    color: black;
 }
 
 .indice button:hover{
@@ -302,6 +306,19 @@
     width: 430px;
     border: 1px solid black;
     border-radius: 6px;
+}
+.pie_pag{
+    width: 100%;
+    height: 130px;
+    background-color:  #102e62;
+    margin-top: 50px;
     
-
+}
+.Derechos{
+    font-size: 22px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.Primer_div{
+    display: flex;
+    justify-content: space-between;
 }
