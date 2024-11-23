@@ -2,32 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos.css">
     <style>
+        .btn_compra{
+            padding: 5px;
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #0e0477;
+            border-radius: 8px;
+        }
+        .btn_compra:hover{
+            background-color: #64cdfa;
+        }
 
-        table{
-            margin: 20px auto;
-            border-collapse: collapse;
+        .btn_reinicio{
+            padding: 5px;
+            background-color: #0e0477;
+            font-family: 'Courier New', Courier, monospace;
+            border-radius: 8px;
         }
-        td, tr{
-            width: 180px;
-            height: 50px;
-            padding: 3px;
-            text-align: center;
+        .btn_reinicio:hover{
+            background-color: #64cdfa;
         }
-        .btn_FinCompra{
-            margin-left: 66%;
-            align-items: center;
-            font-size: 18px;
-            width: 155px;
-            background-color: transparent;
-        }
-        .btn_FinCompra:hover{
-            background-color: #1ebcfb;
-            border-radius: 5px;
-            border-color: #1ebcfb;
-        }
+
+       
     </style>
+    
+    <script src="/Js/productos.js"></script>
+    <script src="/Js/car.js" defer></script>
+    <script src="/Js/CarritoService.js"></script>   
     <title>Ferrejarciería Marvel-Carrito</title>
 </head>
 <body>
@@ -52,30 +55,25 @@
                 <li><a href="Contacto.html">Contáctanos</a></li>
                 <article class="carrito">
                     <button class="btn_carrito" onclick="location.href='Carrito.html'" ><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAo5JREFUSEuVlz92EzEQxn+ih0fBAZySjo6OOBwAruA0cAU6OzQcgUeahCvkAJgSujS0sAegywHE6s/uaqSZlVHhJ+tJM/N9882M7QjLAT7u8moO5nOHl1fLZ40xaaf8FvanrfjK0XesmFNwGI7zTQt4hxedRRmQ69heyUSJ3trbEQrEq0FkqqMYyv1piVKVMIlrP9o7CI01Adfy0G5XlBa6dXDmHUOMvTC1H58cNAA6E4oOmiMpxgjMcZVEuqwtcJ5La+tg6w01aueLGKxH8w25mYs5vQtBHNv6Vkr+FAkncIHNq7SViAvw0fsfYNPVTpN2U6JnwDCBEeVUPdmPlw52m7JzrAQ7AMHxXBEpx3q/SHRXq1/3qrGC5olsEYUPgiv7dkO35XjlfPARrbxhtMwZ5n58cCgjaRzkZhJ7uF7mGW3JhCmuORUbfKR7oylcbUdTT1mCUMEVhyZZR/Ah36t+DPVfjkHfLiW0jNR2SLT+dw5uMpBg5OsijxZeqtFIe2iNgwlHz1kT/ySyWweXyV1f33ZF9HMchz/4m7H4d9nZhTBoyzkiXu5K5fVUndub3/qmpqVKq99OVYtU9CHFV405iSZMr12p8FWyU9fLvVkXZrcdVxcUhdc0RvUGmguqpZWk6uXjlKJ5BzwFPgMPQmOOF3j3Bvw9cKdKcG44Kl69eQOfgA+5nI4O/7pQ+DPgN/A4m3wL7k7J/VwTFQepVxut8ZvDX2QlBKIeFao4B74XxoImPlp5LKjusJwiCTR/yYivwb+vJtsP4KWDBw+vwN3rKBKw7qrQP8fxBO9+GsMjIP8F/JXzVqavaJlmXs0epZeTXWT18PqP/05mxuo/XyexmC/pw7RrobkgEVv4/wF02PgmXMySnAAAAABJRU5ErkJggg=="/>
+                        
                     </button>
+                    <span class="cont_carrito"id="cuenta_carrito">0</span></button>
                 </article>
             </ul>
         </nav>
-        <section class="productos_carrito">
-            <table>
-                <tr>
-                    <td id="ID_carrito">ID</td>
-                    <td id="Nom_carrito">Nombre del producto:</td>
-                    <td id="cant_Carrito">Cantidad</td>
-                    <td id="precio_carrito">Precio</td>
-                    <td id="Subto_carrito">Subtotal</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>Ácido M</td>
-                    <td>10</td>
-                    <td>10.20</td>
-                    <td>100.20</td>
-                </tr>
-            </table>
+        <section style="height: 100vh; display: flex; flex-direction: column;">
+        <P style="font-family: 'Courier New', Courier, monospace; font-size: 20px; text-align: center;" id="carrito_vacio">Carrito Vacio</P>
+        <section class="productos_carrito" id="prod_carrito"></section>
+        <section id="totales" class="total">
+            <p>Total Unidades: <span id="unidades">0</span></p>
+            <p>Total precio: $<span id="precio">0</span></p>
+            <div style="margin-top: 10px;">
+            <button disabled class="btn_compra">Comprar</button>
+            <button  class="btn_reinicio" id="reiniciar">Reiniciar Carrito</button>
+            </div>
         </section>
-        <button class="btn_FinCompra">Finalizar Compra</button>
         <section>
+        </section>
             <footer class="pie_pag">
                 <section class="Primer_div">
                 <p style="font-weight: bold; font-size: 23px; font-family: 'Courier New', Courier, monospace;">Llámanos <a href=" tel:+523331057151">+52 33 3105 7151</a></p>

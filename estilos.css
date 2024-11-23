@@ -15,6 +15,7 @@
 }
 .cuerpo{
     background-color: #5b6ea9;
+    height: 100%
 }
 
 .Logo{
@@ -33,7 +34,7 @@
     margin-left: 10px;
 }
 
-.Barra_busq input {
+.Barra {
     padding: 8px;
     margin-right: 10px;
     border: 1px solid #ccc; 
@@ -96,7 +97,15 @@
     border-color: transparent;
     
 }
-
+.cont_carrito{
+    border-radius: 100%;
+    background-color: #11a689;
+    display: inline-block;
+    height: 25px;
+    line-height: 25px;
+    aspect-ratio: 1;
+    text-align: center;
+}
 .btn_carrito img:hover{
     background-color: #1ebcfb;
     border-radius: 5px;
@@ -210,10 +219,11 @@
 }
 
 .productos_cont{
-    width: 77%;
+    width: 100%;
     margin-top: 60px;
     display: flex;
     flex-wrap: wrap;
+    
 }
 
 .item{
@@ -221,8 +231,36 @@
     height: 350px;
     border: 1px solid black;
     text-align: center;
-    line-height: 60px;
-    margin: 10px
+    line-height: 25px;
+    margin: 10px;
+    background-color: #464d70;
+    box-shadow: 0 0 5px rgb(0, 0, 0,0.1);
+    transition: 200ms;
+}
+.item:hover{
+    translate: 0 -10px;
+    box-shadow: 0 10px 5px rgb(0, 0, 0,0.1);
+
+}
+
+.item img{
+    margin-top: 5px;
+    width: 90%;
+    aspect-ratio: 1.5;
+}
+.item button:hover{
+    background-color: #66bfe5;
+}
+
+
+
+.item button{
+    background-color: #46a3d6 ;
+    padding: 5px 10px;
+    border: unset;
+    border-radius: 5px;
+    cursor: pointer;
+    
 }
 
 .indice{
@@ -322,3 +360,42 @@
     display: flex;
     justify-content: space-between;
 }
+
+.productos_carrito{
+    width: 500px;
+    margin: auto;
+}
+.item_carrito{
+display: flex;
+gap: 20px;
+align-items: center;
+margin: 10px;
+}
+.item_carrito img{
+height: 110px;
+aspect-ratio: 1.5;
+}
+.item_carrito h3{
+width: 110px;
+font-family: 'Courier New', Courier, monospace;
+}
+.item_carrito div{
+font-family: 'Courier New', Courier, monospace;
+padding: 3px;
+border-radius: 5px;
+}
+
+.item_carrito div button{
+background-color: #1f9bf5;
+width: 30px;
+font-size: 20px;
+font-family: 'Courier New', Courier, monospace;
+}
+.total{
+margin-top: 20px;
+text-align: center;
+font-family: 'Courier New', Courier, monospace;
+}
+.escondido{
+    display: none;
+  }

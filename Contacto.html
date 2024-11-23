@@ -2,19 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="estilos.css">
     <style>
         label{
             margin-left: 5px;
         }
-        input{
+        .inpayud{
             border: 1px solid black;
             border-radius: 6px;
             background-color: aliceblue;
             color: black;
             font-size: 18px;
         }
+       
     </style>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="Js/CarritoService.js"></script>
+    
     <title>Ferrejarciería Marvel-Contacto</title>
 </head>
 <body>
@@ -25,7 +28,7 @@
                     <img src="logo_2.png"alt="Logo" >
                 </article>
                 <article class="Barra_busq">
-                    <input type="text" placeholder="Buscar productos..." class="Barra">
+                    <input type="text" placeholder="Buscar productos..." style="padding: 8px; margin-right: 10px; border: 1px solid #ccc; width: 250px; border-radius: 8px;">
                     <button type="submit">Buscar</button class="BotonB">
                 </article>
             </section>   
@@ -39,7 +42,9 @@
                 <li><a href="Contacto.html">Contáctanos</a></li>
                 <article class="carrito">
                     <button class="btn_carrito" onclick="location.href='Carrito.html'" ><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAo5JREFUSEuVlz92EzEQxn+ih0fBAZySjo6OOBwAruA0cAU6OzQcgUeahCvkAJgSujS0sAegywHE6s/uaqSZlVHhJ+tJM/N9882M7QjLAT7u8moO5nOHl1fLZ40xaaf8FvanrfjK0XesmFNwGI7zTQt4hxedRRmQ69heyUSJ3trbEQrEq0FkqqMYyv1piVKVMIlrP9o7CI01Adfy0G5XlBa6dXDmHUOMvTC1H58cNAA6E4oOmiMpxgjMcZVEuqwtcJ5La+tg6w01aueLGKxH8w25mYs5vQtBHNv6Vkr+FAkncIHNq7SViAvw0fsfYNPVTpN2U6JnwDCBEeVUPdmPlw52m7JzrAQ7AMHxXBEpx3q/SHRXq1/3qrGC5olsEYUPgiv7dkO35XjlfPARrbxhtMwZ5n58cCgjaRzkZhJ7uF7mGW3JhCmuORUbfKR7oylcbUdTT1mCUMEVhyZZR/Ah36t+DPVfjkHfLiW0jNR2SLT+dw5uMpBg5OsijxZeqtFIe2iNgwlHz1kT/ySyWweXyV1f33ZF9HMchz/4m7H4d9nZhTBoyzkiXu5K5fVUndub3/qmpqVKq99OVYtU9CHFV405iSZMr12p8FWyU9fLvVkXZrcdVxcUhdc0RvUGmguqpZWk6uXjlKJ5BzwFPgMPQmOOF3j3Bvw9cKdKcG44Kl69eQOfgA+5nI4O/7pQ+DPgN/A4m3wL7k7J/VwTFQepVxut8ZvDX2QlBKIeFao4B74XxoImPlp5LKjusJwiCTR/yYivwb+vJtsP4KWDBw+vwN3rKBKw7qrQP8fxBO9+GsMjIP8F/JXzVqavaJlmXs0epZeTXWT18PqP/05mxuo/XyexmC/pw7RrobkgEVv4/wF02PgmXMySnAAAAABJRU5ErkJggg=="/>
+                        
                     </button>
+                    <span class="cont_carrito"id="cuenta_carrito">0</span></button>
                 </article>
             </ul>
         </nav>
@@ -61,11 +66,11 @@
         <section class="section_ayuda">
             <form action="" method="post" class="form_ayuda">
                 <h2 style="text-align: center;">¿Necesitas Ayuda?</h2>
-                <P><label for="nombre">Nombre: <input type="text" id="nombre" required style="width: 180px; margin: 10px;"></label></P>
-                 <p><label>Apellido: <input type="text" id="apellido" style="width:180px; margin: 10px;"></label></p>
-                <p><label for="email">Correo electrónico: <input type="email" id="email" required style="margin: 10px; width: 200px;"></label> </P>
-                <p><label for="num">Número telefónico: <input type="text" id="tel" required style="margin: 10px;"></label> </P>
-                <p><label for="prod">Producto deseado: <input type="text" id="prod" style="margin: 10px;"></label> </P>
+                <P><label for="nombre">Nombre: <input type="text" id="nombre" required style="width: 180px; margin: 10px;" class="inpayud"></label></P>
+                 <p><label>Apellido: <input type="text" id="apellido" style="width:180px; margin: 10px;" class="inpayud"></label></p>
+                <p><label for="email">Correo electrónico: <input type="email" id="email" required style="margin: 10px; width: 200px;" class="inpayud"></label> </P>
+                <p><label for="num">Número telefónico: <input type="text" id="tel" required style="margin: 10px;" class="inpayud"></label> </P>
+                <p><label for="prod">Producto deseado: <input type="text" id="prod" style="margin: 10px;" class="inpayud"></label> </P>
                 <p><label for="Mensaje">Su Mensaje: </label> </P>
                  <textarea style="height:100px; width: 350px; vertical-align: top;  box-sizing: border-box; color: black; font-size: 18px; text-align: justify; background-color: aliceblue;"></textarea>
             </form>
