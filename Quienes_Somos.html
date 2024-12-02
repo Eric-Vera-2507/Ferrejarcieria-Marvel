@@ -4,12 +4,22 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="estilos.css">
     <script src="Js/CarritoService.js"></script>
+    <style>
+        .up_button{
+            background-color: transparent;
+            border-color: transparent;
+        }
+
+        .up_button:hover{
+            background-color:#1ebcfb ;
+        }
+    </style>
     <title>Ferrejarciería Marvel-Sobre Nosotros</title>
 </head>
 <body>
     <main class="cuerpo">
         <header >
-            <section class="encabezado">
+            <section class="encabezado" id="nav_bar">
                 <article class="Logo">
                     <img src="logo_2.png"alt="Logo" >
                 </article>
@@ -19,7 +29,7 @@
                 </article>
             </section>   
         </header>
-        <nav class="Barra_nav">
+        <nav class="Barra_nav" >
             <ul class="nav_elementos">
                 <li><a href="Index.html">Inicio</a></li>
                 <li><a href="Marcas.html">Marcas</a></li>
@@ -34,34 +44,42 @@
                 </article>
             </ul>
         </nav>
-        <section style="height: 100vh; display: flex; flex-direction: column;">
-        <section class="contenedor_desp">
+        <section class="contenedor_desp" >
             <details>
                 <summary>Misión <img class="icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAl9JREFUSEutV+G5gjAMvGyCm+gmz0nASXQT3AQ36SMlbRPaVPyUP/gq3CWXS+IjOBcBCN6XPzinQqCp3tDK1/GmP1cB+ZiKWN7qcnpAHwSdaNo89vQ3su8wK9Aq+K6WR2SyBVBw+WVCEEMdIdOcnib+uakxAfcADAypjRMpqoNGso14FfVrRbkB4HuES9cfgHv645u6tmMkEMJ1TewRiRUBZzqDMIjeLxBe3C9VCQ73cUQ/q2ROoc44PjSuD03yIN9ZmgOXq88MIBFveLW5Mn55mDAhCLnoF7OvamlbQRRiQsbi6wngUjJgFbNxsllYan4hmgzAKRlin3qnFfndRRzJZmKMlGz8VE+uDV1L/iCATbGL0aa9C0JLzJlyxorYuLoCGleyTr0b0207GtfbJIGyg68tk+h2MhHJwyzXIHuqSN7wkhyJxPHtLHGVarB93ArsDNAdCAzIQCwbt5m3M7UxLwj0LK1o4Y25HLwDLSatuHUBxzWt7X/rLfR3UidDLWmUVi7foh0IWKTNisQ7Q2l3GuLOpNim2lbvLLlSaFHtl13ca79+xlb7cRVxkuLqqVZKEaWmWzGAjFvHjI1EPdvSIkZjES9CEKcTAc9gplMNW1D9AbKfFgmFazlLvVnyNN2Y2CwA80OxlYffGXqyJvGidONqouhedTkLxW/4vrn0YrADU/frEyHLvs3h3iJRA9L7uZGHayPuAaC5TLQjurUGSKePjn3lETfmeVo2oqbugM6/ENUiaQ6nbhhGar3yPlXtWLKVcI65bGYtf+czTdwNupbdbujduv+uxvptS/wPlK/+IzO+I1gAAAAASUVORK5CYII="/></summary>
                 <article>
-                    text
+                    En Ferrejarcería Marvel nos dedicamos a ofrecer productos y soluciones de calidad para la construcción, reparación y mantenimiento del hogar y la industria. 
+                    Nos comprometemos a brindar un servicio excepcional, asesoramiento profesional y productos de alta durabilidad para satisfacer las necesidades de nuestros clientes, asegurando que cada proyecto sea un éxito.
                 </article>
            </details>
            <details>
                 <summary>Visión <img class="icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAl9JREFUSEutV+G5gjAMvGyCm+gmz0nASXQT3AQ36SMlbRPaVPyUP/gq3CWXS+IjOBcBCN6XPzinQqCp3tDK1/GmP1cB+ZiKWN7qcnpAHwSdaNo89vQ3su8wK9Aq+K6WR2SyBVBw+WVCEEMdIdOcnib+uakxAfcADAypjRMpqoNGso14FfVrRbkB4HuES9cfgHv645u6tmMkEMJ1TewRiRUBZzqDMIjeLxBe3C9VCQ73cUQ/q2ROoc44PjSuD03yIN9ZmgOXq88MIBFveLW5Mn55mDAhCLnoF7OvamlbQRRiQsbi6wngUjJgFbNxsllYan4hmgzAKRlin3qnFfndRRzJZmKMlGz8VE+uDV1L/iCATbGL0aa9C0JLzJlyxorYuLoCGleyTr0b0207GtfbJIGyg68tk+h2MhHJwyzXIHuqSN7wkhyJxPHtLHGVarB93ArsDNAdCAzIQCwbt5m3M7UxLwj0LK1o4Y25HLwDLSatuHUBxzWt7X/rLfR3UidDLWmUVi7foh0IWKTNisQ7Q2l3GuLOpNim2lbvLLlSaFHtl13ca79+xlb7cRVxkuLqqVZKEaWmWzGAjFvHjI1EPdvSIkZjES9CEKcTAc9gplMNW1D9AbKfFgmFazlLvVnyNN2Y2CwA80OxlYffGXqyJvGidONqouhedTkLxW/4vrn0YrADU/frEyHLvs3h3iJRA9L7uZGHayPuAaC5TLQjurUGSKePjn3lETfmeVo2oqbugM6/ENUiaQ6nbhhGar3yPlXtWLKVcI65bGYtf+czTdwNupbdbujduv+uxvptS/wPlK/+IzO+I1gAAAAASUVORK5CYII="/></summary>
                 <article>
-                    text
+                    Ser la ferretería líder en el mercado, reconocida por la excelencia en el servicio, la innovación en productos y la confianza de nuestros clientes. 
+                    Queremos ser la opción preferida para quienes buscan calidad, disponibilidad y precios competitivos en todo lo relacionado con herramientas y materiales para la construcción y mantenimiento.
                 </article>
            </details>
            <details>
                 <summary>Valores <img class="icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAl9JREFUSEutV+G5gjAMvGyCm+gmz0nASXQT3AQ36SMlbRPaVPyUP/gq3CWXS+IjOBcBCN6XPzinQqCp3tDK1/GmP1cB+ZiKWN7qcnpAHwSdaNo89vQ3su8wK9Aq+K6WR2SyBVBw+WVCEEMdIdOcnib+uakxAfcADAypjRMpqoNGso14FfVrRbkB4HuES9cfgHv645u6tmMkEMJ1TewRiRUBZzqDMIjeLxBe3C9VCQ73cUQ/q2ROoc44PjSuD03yIN9ZmgOXq88MIBFveLW5Mn55mDAhCLnoF7OvamlbQRRiQsbi6wngUjJgFbNxsllYan4hmgzAKRlin3qnFfndRRzJZmKMlGz8VE+uDV1L/iCATbGL0aa9C0JLzJlyxorYuLoCGleyTr0b0207GtfbJIGyg68tk+h2MhHJwyzXIHuqSN7wkhyJxPHtLHGVarB93ArsDNAdCAzIQCwbt5m3M7UxLwj0LK1o4Y25HLwDLSatuHUBxzWt7X/rLfR3UidDLWmUVi7foh0IWKTNisQ7Q2l3GuLOpNim2lbvLLlSaFHtl13ca79+xlb7cRVxkuLqqVZKEaWmWzGAjFvHjI1EPdvSIkZjES9CEKcTAc9gplMNW1D9AbKfFgmFazlLvVnyNN2Y2CwA80OxlYffGXqyJvGidONqouhedTkLxW/4vrn0YrADU/frEyHLvs3h3iJRA9L7uZGHayPuAaC5TLQjurUGSKePjn3lETfmeVo2oqbugM6/ENUiaQ6nbhhGar3yPlXtWLKVcI65bGYtf+czTdwNupbdbujduv+uxvptS/wPlK/+IzO+I1gAAAAASUVORK5CYII="/></summary>
                 <article>
-                    text
-                </article>
-           </details>
-           <details>
-                <summary>Historia <img class="icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAl9JREFUSEutV+G5gjAMvGyCm+gmz0nASXQT3AQ36SMlbRPaVPyUP/gq3CWXS+IjOBcBCN6XPzinQqCp3tDK1/GmP1cB+ZiKWN7qcnpAHwSdaNo89vQ3su8wK9Aq+K6WR2SyBVBw+WVCEEMdIdOcnib+uakxAfcADAypjRMpqoNGso14FfVrRbkB4HuES9cfgHv645u6tmMkEMJ1TewRiRUBZzqDMIjeLxBe3C9VCQ73cUQ/q2ROoc44PjSuD03yIN9ZmgOXq88MIBFveLW5Mn55mDAhCLnoF7OvamlbQRRiQsbi6wngUjJgFbNxsllYan4hmgzAKRlin3qnFfndRRzJZmKMlGz8VE+uDV1L/iCATbGL0aa9C0JLzJlyxorYuLoCGleyTr0b0207GtfbJIGyg68tk+h2MhHJwyzXIHuqSN7wkhyJxPHtLHGVarB93ArsDNAdCAzIQCwbt5m3M7UxLwj0LK1o4Y25HLwDLSatuHUBxzWt7X/rLfR3UidDLWmUVi7foh0IWKTNisQ7Q2l3GuLOpNim2lbvLLlSaFHtl13ca79+xlb7cRVxkuLqqVZKEaWmWzGAjFvHjI1EPdvSIkZjES9CEKcTAc9gplMNW1D9AbKfFgmFazlLvVnyNN2Y2CwA80OxlYffGXqyJvGidONqouhedTkLxW/4vrn0YrADU/frEyHLvs3h3iJRA9L7uZGHayPuAaC5TLQjurUGSKePjn3lETfmeVo2oqbugM6/ENUiaQ6nbhhGar3yPlXtWLKVcI65bGYtf+czTdwNupbdbujduv+uxvptS/wPlK/+IzO+I1gAAAAASUVORK5CYII="/></summary>
-                <article>
-                    text
+                    <p>
+                        Calidad: Nos aseguramos de ofrecer productos de alta calidad, que cumplan con los más altos estándares.
+                    </p>
+                    <p>
+                        Compromiso: Trabajamos con dedicación para satisfacer las necesidades de nuestros clientes y superar sus expectativas.
+                    </p>
+                    <p>
+                        Honestidad: Fomentamos una relación transparente y de confianza con nuestros clientes y proveedores.
+                    </p>
+                    <p>
+                        Innovación: Buscamos constantemente nuevas soluciones y productos que mejoren la experiencia de nuestros clientes.
+                    </p>
+                    <p>
+                        Responsabilidad: Somos conscientes del impacto de nuestro trabajo en la comunidad y el medio ambiente, actuando con ética y responsabilidad.
+                    </p>
                 </article>
            </details>
         </section>
-    </section>
         <section>
             <footer class="pie_pag">
                 <section class="Primer_div">
@@ -73,8 +91,11 @@
                         <li>Domingo: Cerrado</li>
                     </ul>
                 </p>
+                <p><button class="up_button"  onclick="location.href='#nav_bar'"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAgBJREFUSEutVuuZAiEMnHSinWgnWsmulex1op1oJ9zyUAJJCN53/nMJJJnMDBDUHwEI+tLEV313+zX+c1L/sYi0zd5LM8f+VwzvkCUmEIICME8r4Xo35TQoUDU7rilm+m3PtXb0LSgzVjprow4AbQWhK4DXBOeakEwugZMNb9l9B3AqUStAt29VYLJaLyjVeAnA1nW47uXf8jcXrU+UCrUgWj7vAOApMMsMO34DudGxSagEsTHPB4DpeY+hboSHZddahLRHk0cxyHMgR44rRSZWBEnAIfQQd5xkhx6B8GG5RVPG6qF5jiDuQYhJz828S3beU9Oxbhq07KxaO7JKJ2qtuYVctE3wvDoS6a7D5cpGsFw6V8EgEaE9L0onSshxN7W0CrkikhGrlz1bYrHCt26uJoXW/W4sxiL9XOvmBIRIqMlmLd2n72cQHv2118y4bE/uJI4yPaWvTQQWyOnF/VyDukpnJnuvEf3FlFguyVWKThcAYbOfWy6Ta/ty7I3EeMf5AhiOSxIkq6BYo4VQNZBjSHd3jP/86AKE/rpzrLmbb01ggXYF4Scu8sTR0LfAdTs8SFk09FrGHkkWEyeO5cR+pRUX98U9R3/DQBRDGJ5nL1qkNxIrJHJMky/zZCMPUi92a7PfuAP1e6z+RBwYh0hw8kgPsJ+305pu2SkYosD3C/8r3yKbpcBZAAAAAElFTkSuQmCC"/></button></p>
             </section>
+                
                 <p class="Derechos">© 2024 Ferrejarciería Marvel. Todos los derechos reservados.</p>
+                
             </footer>
         </section>
         

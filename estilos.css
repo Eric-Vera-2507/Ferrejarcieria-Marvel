@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     color: white;
+    
 }
 
 .encabezado {
@@ -15,7 +16,8 @@
 }
 .cuerpo{
     background-color: #5b6ea9;
-    height: 100%
+    height: 100%;
+    flex:1;
 }
 
 .Logo{
@@ -297,7 +299,11 @@
 
 .contenedor_desp{
     width: 700px;
+    min-height: 100vh;
     margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
 }
 
 .contenedor_desp details{
@@ -306,6 +312,16 @@
     overflow: hidden;
     margin-bottom: 12px;
     
+}
+.contenedor_desp details[open]{
+    max-height: none;
+    overflow: visible;
+}
+
+.contenedor_desp details >article{
+    padding: 10px;
+    max-height: 1520px;
+    overflow-y: auto;
 }
 
 .contenedor_desp details summary{
@@ -350,6 +366,8 @@
     height: 130px;
     background-color:  #102e62;
     margin-top: 50px;
+    display: flex;
+    flex-direction: column;
     
 }
 .Derechos{
