@@ -4,7 +4,7 @@ function CrearTarjetasProductos(prod){
         const nuevoproducto = document.createElement("div");
         nuevoproducto.classList ="item";
         nuevoproducto.innerHTML= `
-        <img src=${producto.img}>
+        <img src="${producto.urlImagen}">
         <h3>${producto.nombre}</h3>
         <p>$ ${producto.precio}</p>
         <button> Agregar al carrito</button>        
@@ -14,4 +14,10 @@ function CrearTarjetasProductos(prod){
     });
 }
 
-CrearTarjetasProductos(productos);
+    getprod().then(productos => {
+        CrearTarjetasProductos(productos);
+    })
+    
+        
+    
+

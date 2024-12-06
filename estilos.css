@@ -156,14 +156,15 @@
 }
 
 .tabla_Marcas{
-    border-collapse: collapse; 
-    width: 90%;
+    
+    width: 80%;
     margin: 50px auto 0;
 }
 .tabla_Marcas tr, td{
     border: 1px solid black;
-    padding: 90px;
+    padding: 20px;
     text-align: center;
+    aspect-ratio: 1.5;
 }
 
 .contenedor{

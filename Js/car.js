@@ -9,7 +9,7 @@ function CrearTarjetasProductos(){
             const nuevoproducto = document.createElement("div");
             nuevoproducto.classList ="item_carrito";
             nuevoproducto.innerHTML= `
-            <img src=${producto.img}>
+            <img src=${producto.urlImagen}>
             <h3>${producto.nombre}</h3>
             <p>$ ${producto.precio}</p>
             <div>
@@ -75,4 +75,30 @@ document.getElementById("reiniciar").addEventListener("click", () => {
     carritoVacioElement.classList.toggle("escondido", prod);
     totalesContainer.classList.toggle("escondido", !prod);
   }
+
+  revisarMensajeVacio();
   
+  document.getElementById("compra").addEventListener("click", async ()=>{
+    const carrito = localStorage.getItem("productos");
+    if( carrito && carrito.length > 0){
+      const carritoObj = JSON.parse(carrito); 
+      const res= await fetch("http://localhost:4000/carrito/comprar", {
+        method:"POST",
+        body: JSON.stringify(carritoObj),
+        headers: {
+          "Content-Type": "application/json"
+        }
+      });
+
+      if (res.ok) {
+        alert("Compra exitosa");
+        contenedor_tarjetas.innerHTML = "";
+        reiniciarCarrito();
+        revisarMensajeVacio();
+      } else {
+          alert("Error en la compra");
+      }
+    }else{
+      alert("No hay productos en el carrito");
+    }
+  });
